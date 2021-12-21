@@ -1,46 +1,78 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<html lang="en">
+<!--begin::Head-->
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+<head>
+	<base href="">
+	<title>ConcoreAcademics</title>
+	<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
+	<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
+	<meta property="og:url" content="https://keenthemes.com/metronic" />
+	<meta property="og:site_name" content="Keenthemes | Metronic" />
+	<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+	<link rel="shortcut icon" href="{{asset('backend/media/logos/logo.png')}}" />
+	<!--begin::Fonts-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" />
+	<!--end::Fonts-->
+	<!--begin::Page Vendor Stylesheets(used by this page)-->
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+	<link href="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet" type="text/css" />
+	<!--end::Page Vendor Stylesheets-->
+	<!--begin::Global Stylesheets Bundle(used by all pages)-->
+	<link href="{{asset('plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{asset('backend/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+	<!-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> -->
+	<!--end::Global Stylesheets Bundle-->
+</head>
+<!--end::Head-->
+<!--begin::Body-->
 
-        @livewireStyles
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-fixed aside-secondary-disabled">
+	<!--begin::Main-->
+	<!--begin::Root-->
+	<div class="d-flex flex-column flex-root">
+		<!--begin::Page-->
+		<div class="page d-flex flex-row flex-column-fluid">
+<!--sidebar -->@include('navigation-menu')
 
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans antialiased">
-        <x-jet-banner />
+<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+    <!-- body header -->
+    @include('header-menu')
+    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+						<!--begin::Container-->
+                        
+						<div class="container-xxl" id="kt_content_container">
+                            <!-- content -->
+                            @yield('content')
+                            </div>
+					</div>
+				</div>
+			</div>
+            <!-- footer -->
+      <!--begin::Javascript-->
+			<!--begin::Global Javascript Bundle(used by all pages)-->
+			<script src="{{asset('plugins/global/plugins.bundle.js')}}"></script>
+			<script src="{{asset('backend/js/scripts.bundle.js')}}"></script>
+			<!--end::Global Javascript Bundle-->
+			<!--begin::Page Vendors Javascript(used by this page)-->
+			<script src="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
+			<!--end::Page Vendors Javascript-->
+			<!--begin::Page Custom Javascript(used by this page)-->
+			<script src="{{asset('backend/js/custom/widgets.js')}}"></script>
+			<script src="{{asset('backend/js/custom/apps/chat/chat.js')}}"></script>
+			<script src="{{asset('backend/js/custom/modals/create-app.js')}}"></script>
+			<script src="{{asset('backend/js/custom/modals/upgrade-plan.js')}}"></script>
+			<!--end::Page Custom Javascript-->
+			<!--end::Javascript-->
+		</div>
+	</div>
+</body>
+<!--end::Body-->
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-
-        @stack('modals')
-
-        @livewireScripts
-    </body>
-</html>
+</html>      
