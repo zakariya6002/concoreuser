@@ -1,319 +1,120 @@
-<div id="kt_aside" class="aside aside-extended" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="auto" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_toggle">
-	<!--begin::Primary-->
-	<div class="aside-primary d-flex flex-column align-items-lg-center flex-row-auto">
-		<!--begin::Logo-->
-		<div class="aside-logo d-none d-lg-flex flex-column align-items-center flex-column-auto py-10" id="kt_aside_logo">
-			<a href="#">
-				<img alt="Logo" src="{{asset('backend/media/logos/logo.png')}}" class="h-35px" />
-			</a>
-		</div>
-		<!--end::Logo-->
-		<!--begin::Nav-->
-		<div class="aside-nav d-flex flex-column align-items-center flex-column-fluid w-100 pt-5 pt-lg-0" id="kt_aside_nav">
-			<!--begin::Wrapper-->
-			<div class="hover-scroll-y mb-10" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-wrappers="#kt_aside_nav" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-offset="0px">
-				<!--begin::Nav-->
-				<ul class="nav flex-column">
-					<!--begin::Nav item-->
-					<li class="nav-item mb-2" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="right" data-bs-dismiss="click" title="Dashboard">
-						<!--begin::Nav link-->
-						<a class="nav-link btn btn-icon btn-active-color-primary btn-color-gray-400 btn-active-light active" href="{{route('dashboard')}}">
-							<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-							<span class="svg-icon svg-icon-2x">
+<!--begin::Aside-->
+<div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+					<!--begin::Brand-->
+					<div class="aside-logo flex-column-auto" id="kt_aside_logo">
+						<!--begin::Logo-->
+						<a href="#">
+							<img alt="Logo" src="backend/media/logos/logo2.png" class="h-60px logo" />
+						</a>
+						<!--end::Logo-->
+						<!--begin::Aside toggler-->
+						<div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
+							<!--begin::Svg Icon | path: icons/duotune/arrows/arr079.svg-->
+							<span class="svg-icon svg-icon-1 rotate-180">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-									<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
-									<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
-									<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
-									<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
+									<path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="black" />
+									<path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="black" />
 								</svg>
 							</span>
 							<!--end::Svg Icon-->
-						</a>
-						<!--end::Nav link-->
-					</li>
-					<!--end::Nav item-->
-					<!--begin::Nav item-->
-					<li class="nav-item mb-2" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="right" data-bs-dismiss="click" title="Tutors">
-						<!--begin::Nav link-->
-						<a class="nav-link btn btn-icon btn-active-color-primary btn-color-gray-400 btn-active-light"  href="#">
-							<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
-							<span class="svg-icon svg-icon-2x">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-									<path opacity="0.3" d="M20 15H4C2.9 15 2 14.1 2 13V7C2 6.4 2.4 6 3 6H21C21.6 6 22 6.4 22 7V13C22 14.1 21.1 15 20 15ZM13 12H11C10.5 12 10 12.4 10 13V16C10 16.5 10.4 17 11 17H13C13.6 17 14 16.6 14 16V13C14 12.4 13.6 12 13 12Z" fill="black" />
-									<path d="M14 6V5H10V6H8V5C8 3.9 8.9 3 10 3H14C15.1 3 16 3.9 16 5V6H14ZM20 15H14V16C14 16.6 13.5 17 13 17H11C10.5 17 10 16.6 10 16V15H4C3.6 15 3.3 14.9 3 14.7V18C3 19.1 3.9 20 5 20H19C20.1 20 21 19.1 21 18V14.7C20.7 14.9 20.4 15 20 15Z" fill="black" />
-								</svg>
-							</span>
-							<!--end::Svg Icon-->
-						</a>
-						<!--end::Nav link-->
-					</li>
-					<!--end::Nav item-->
-					<!--begin::Nav item-->
-					<li class="nav-item mb-2" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="right" data-bs-dismiss="click" title="Jobs">
-						<!--begin::Nav link-->
-						<a class="nav-link btn btn-icon btn-active-color-primary btn-color-gray-400 btn-active-light"  href="#">
-							<!--begin::Svg Icon | path: icons/duotune/general/gen032.svg-->
-							<span class="svg-icon svg-icon-2x">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-									<rect x="8" y="9" width="3" height="10" rx="1.5" fill="black" />
-									<rect opacity="0.5" x="13" y="5" width="3" height="14" rx="1.5" fill="black" />
-									<rect x="18" y="11" width="3" height="8" rx="1.5" fill="black" />
-									<rect x="3" y="13" width="3" height="6" rx="1.5" fill="black" />
-								</svg>
-							</span>
-							<!--end::Svg Icon-->
-						</a>
-						<!--end::Nav link-->
-					</li>
-					<!--end::Nav item-->
-					<!--begin::Nav item-->
-					<li class="nav-item mb-2" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="right" data-bs-dismiss="click" title="Sessions">
-						<!--begin::Nav link-->
-						<a class="nav-link btn btn-icon btn-active-color-primary btn-color-gray-400 btn-active-light" href="#">
-							<!--begin::Svg Icon | path: icons/duotune/general/gen048.svg-->
-							<span class="svg-icon svg-icon-2x">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-									<path opacity="0.3" d="M20.5543 4.37824L12.1798 2.02473C12.0626 1.99176 11.9376 1.99176 11.8203 2.02473L3.44572 4.37824C3.18118 4.45258 3 4.6807 3 4.93945V13.569C3 14.6914 3.48509 15.8404 4.4417 16.984C5.17231 17.8575 6.18314 18.7345 7.446 19.5909C9.56752 21.0295 11.6566 21.912 11.7445 21.9488C11.8258 21.9829 11.9129 22 12.0001 22C12.0872 22 12.1744 21.983 12.2557 21.9488C12.3435 21.912 14.4326 21.0295 16.5541 19.5909C17.8169 18.7345 18.8277 17.8575 19.5584 16.984C20.515 15.8404 21 14.6914 21 13.569V4.93945C21 4.6807 20.8189 4.45258 20.5543 4.37824Z" fill="black" />
-									<path d="M10.5606 11.3042L9.57283 10.3018C9.28174 10.0065 8.80522 10.0065 8.51412 10.3018C8.22897 10.5912 8.22897 11.0559 8.51412 11.3452L10.4182 13.2773C10.8099 13.6747 11.451 13.6747 11.8427 13.2773L15.4859 9.58051C15.771 9.29117 15.771 8.82648 15.4859 8.53714C15.1948 8.24176 14.7183 8.24176 14.4272 8.53714L11.7002 11.3042C11.3869 11.6221 10.874 11.6221 10.5606 11.3042Z" fill="black" />
-								</svg>
-							</span>
-							<!--end::Svg Icon-->
-						</a>
-						<!--end::Nav link-->
-					</li>
-					<!--end::Nav item-->
-					<!--begin::Nav item-->
-					<li class="nav-item mb-2" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="right" data-bs-dismiss="click" title="Notifications">
-						<!--begin::Nav link-->
-						<a class="nav-link btn btn-icon btn-active-color-primary btn-color-gray-400 btn-active-light" data-bs-toggle="tab" href="#kt_aside_nav_tab_notifications">
-							<!--begin::Svg Icon | path: icons/duotune/abstract/abs027.svg-->
-							<span class="svg-icon svg-icon-2x">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-									<path opacity="0.3" d="M21.25 18.525L13.05 21.825C12.35 22.125 11.65 22.125 10.95 21.825L2.75 18.525C1.75 18.125 1.75 16.725 2.75 16.325L4.04999 15.825L10.25 18.325C10.85 18.525 11.45 18.625 12.05 18.625C12.65 18.625 13.25 18.525 13.85 18.325L20.05 15.825L21.35 16.325C22.35 16.725 22.35 18.125 21.25 18.525ZM13.05 16.425L21.25 13.125C22.25 12.725 22.25 11.325 21.25 10.925L13.05 7.62502C12.35 7.32502 11.65 7.32502 10.95 7.62502L2.75 10.925C1.75 11.325 1.75 12.725 2.75 13.125L10.95 16.425C11.65 16.725 12.45 16.725 13.05 16.425Z" fill="black" />
-									<path d="M11.05 11.025L2.84998 7.725C1.84998 7.325 1.84998 5.925 2.84998 5.525L11.05 2.225C11.75 1.925 12.45 1.925 13.15 2.225L21.35 5.525C22.35 5.925 22.35 7.325 21.35 7.725L13.05 11.025C12.45 11.325 11.65 11.325 11.05 11.025Z" fill="black" />
-								</svg>
-							</span>
-							<!--end::Svg Icon-->
-						</a>
-						<!--end::Nav link-->
-					</li>
-					<!--end::Nav item-->
-					<!--begin::Nav item-->
-					<li class="nav-item mb-2" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="right" data-bs-dismiss="click" title="Authors">
-						<!--begin::Nav link-->
-						<a class="nav-link btn btn-icon btn-active-color-primary btn-color-gray-400 btn-active-light" data-bs-toggle="tab" href="#kt_aside_nav_tab_authors">
-							<!--begin::Svg Icon | path: icons/duotune/files/fil005.svg-->
-							<span class="svg-icon svg-icon-2x">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-									<path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM16 13H13V10C13 9.4 12.6 9 12 9C11.4 9 11 9.4 11 10V13H8C7.4 13 7 13.4 7 14C7 14.6 7.4 15 8 15H11V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18V15H16C16.6 15 17 14.6 17 14C17 13.4 16.6 13 16 13Z" fill="black" />
-									<path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="black" />
-								</svg>
-							</span>
-							<!--end::Svg Icon-->
-						</a>
-						<!--end::Nav link-->
-					</li>
-					<!--end::Nav item-->
-				</ul>
-				<!--end::Tabs-->
-			</div>
-			<!--end::Nav-->
-		</div>
-		<!--end::Nav-->
-		<!--begin::Footer-->
-		<div class="aside-footer d-flex flex-column align-items-center flex-column-auto" id="kt_aside_footer">
-			<!--begin::Quick links-->
-			
-			<!--end::Quick links-->
-			<!--begin::Activities-->
-			<div class="d-flex align-items-center mb-3">
-				<!--begin::Drawer toggle-->
-				<div class="btn btn-icon btn-active-color-primary btn-color-gray-400 btn-active-light" data-kt-menu-trigger="click" data-kt-menu-overflow="true" data-kt-menu-placement="top-start" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-dismiss="click" title="Activity Logs" id="kt_activities_toggle">
-					<!--begin::Svg Icon | path: icons/duotune/general/gen032.svg-->
-					<span class="svg-icon svg-icon-2 svg-icon-lg-1">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-							<rect x="8" y="9" width="3" height="10" rx="1.5" fill="black" />
-							<rect opacity="0.5" x="13" y="5" width="3" height="14" rx="1.5" fill="black" />
-							<rect x="18" y="11" width="3" height="8" rx="1.5" fill="black" />
-							<rect x="3" y="13" width="3" height="6" rx="1.5" fill="black" />
-						</svg>
-					</span>
-					<!--end::Svg Icon-->
-				</div>
-				<!--end::drawer toggle-->
-			</div>
-			<!--end::Activities-->
-			<!--begin::Notifications-->
-			<div class="d-flex align-items-center mb-2">
-				<!--begin::Menu wrapper-->
-				<div class="btn btn-icon btn-active-color-primary btn-color-gray-400 btn-active-light" data-kt-menu-trigger="click" data-kt-menu-overflow="true" data-kt-menu-placement="top-start" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-dismiss="click" title="Notifications">
-					<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-					<span class="svg-icon svg-icon-2 svg-icon-lg-1">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-							<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
-							<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
-							<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
-							<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
-						</svg>
-					</span>
-					<!--end::Svg Icon-->
-				</div>
-				<!--begin::Menu-->
-				
-				<!--end::Menu-->
-				<!--end::Menu wrapper-->
-			</div>
-			<!--end::Notifications-->
-			<!--begin::User-->
-			<div class="d-flex align-items-center mb-10" id="kt_header_user_menu_toggle">
-				<!--begin::Menu wrapper-->
-				<div class="cursor-pointer symbol symbol-40px" data-kt-menu-trigger="click" data-kt-menu-overflow="true" data-kt-menu-placement="top-start" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-dismiss="click" title="User profile">
-					<img src="{{asset('backend/media/avatars/150-26.jpg')}}" alt="image" />
-				</div>
-				<!--begin::Menu-->
-				<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px" data-kt-menu="true">
-					<!--begin::Menu item-->
-					<div class="menu-item px-3">
-						<div class="menu-content d-flex align-items-center px-3">
-							<!--begin::Avatar-->
-							<div class="symbol symbol-50px me-5">
-								<img alt="Logo" src="{{asset('backend/media/avatars/150-26.jpg')}}" />
-							</div>
-							<!--end::Avatar-->
-							<!--begin::Username-->
-							<div class="d-flex flex-column">
-								<div class="fw-bolder d-flex align-items-center fs-5">Zakariya
-									<span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Pro</span>
-								</div>
-								<a href="#" class="fw-bold text-muted text-hover-primary fs-7">zhassan@dariopro.co.za</a>
-							</div>
-							<!--end::Username-->
 						</div>
+						<!--end::Aside toggler-->
 					</div>
-					<!--end::Menu item-->
-					<!--begin::Menu separator-->
-					<div class="separator my-2"></div>
-					<!--end::Menu separator-->
-					<!--begin::Menu item-->
-					<div class="menu-item px-5">
-						<a href="../../demo7/dist/account/overview.html" class="menu-link px-5">My Profile</a>
-					</div>
-					<!--end::Menu item-->
-					<!--begin::Menu item-->
-					<div class="menu-item px-5">
-						<a href="../../demo7/dist/pages/projects/list.html" class="menu-link px-5">
-							<span class="menu-text">My Projects</span>
-							<span class="menu-badge">
-								<span class="badge badge-light-danger badge-circle fw-bolder fs-7">3</span>
-							</span>
-						</a>
-					</div>
-					<!--end::Menu item-->
-					<!--begin::Menu item-->
-					<div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="right-end">
-						<a href="#" class="menu-link px-5">
-							<span class="menu-title">My Subscription</span>
-							<span class="menu-arrow"></span>
-						</a>
-						<!--begin::Menu sub-->
-						<div class="menu-sub menu-sub-dropdown w-175px py-4">
-							<!--begin::Menu item-->
-							<div class="menu-item px-3">
-								<a href="../../demo7/dist/account/referrals.html" class="menu-link px-5">Referrals</a>
-							</div>
-							<!--end::Menu item-->
-							<!--begin::Menu item-->
-							<div class="menu-item px-3">
-								<a href="../../demo7/dist/account/billing.html" class="menu-link px-5">Billing</a>
-							</div>
-							<!--end::Menu item-->
-							<!--begin::Menu item-->
-							<div class="menu-item px-3">
-								<a href="../../demo7/dist/account/statements.html" class="menu-link px-5">Payments</a>
-							</div>
-							<!--end::Menu item-->
-							<!--begin::Menu item-->
-							<div class="menu-item px-3">
-								<a href="../../demo7/dist/account/statements.html" class="menu-link d-flex flex-stack px-5">Statements
-									<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="View your statements"></i></a>
-							</div>
-							<!--end::Menu item-->
-							<!--begin::Menu separator-->
-							<div class="separator my-2"></div>
-							<!--end::Menu separator-->
-							<!--begin::Menu item-->
-							<div class="menu-item px-3">
-								<div class="menu-content px-3">
-									<label class="form-check form-switch form-check-custom form-check-solid">
-										<input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications" />
-										<span class="form-check-label text-muted fs-7">Notifications</span>
-									</label>
+					<!--end::Brand-->
+					<!--begin::Aside menu-->
+					<div class="aside-menu flex-column-fluid">
+						<!--begin::Aside Menu-->
+						<div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
+							<!--begin::Menu-->
+							<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
+								<div class="menu-item">
+									<div class="menu-content pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Dashboard</span>
+									</div>
+								</div>
+								<div class="menu-item">
+									<a class="menu-link active" href="../../demo1/dist/index.html">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+													<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
+													<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
+													<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">Default</span>
+									</a>
+								</div>
+								<div class="menu-item">
+									<a class="menu-link" href="../../demo1/dist/dashboards/no-toolbar.html">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/art/art002.svg-->
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+													<path opacity="0.3" d="M8.9 21L7.19999 22.6999C6.79999 23.0999 6.2 23.0999 5.8 22.6999L4.1 21H8.9ZM4 16.0999L2.3 17.8C1.9 18.2 1.9 18.7999 2.3 19.1999L4 20.9V16.0999ZM19.3 9.1999L15.8 5.6999C15.4 5.2999 14.8 5.2999 14.4 5.6999L9 11.0999V21L19.3 10.6999C19.7 10.2999 19.7 9.5999 19.3 9.1999Z" fill="black" />
+													<path d="M21 15V20C21 20.6 20.6 21 20 21H11.8L18.8 14H20C20.6 14 21 14.4 21 15ZM10 21V4C10 3.4 9.6 3 9 3H4C3.4 3 3 3.4 3 4V21C3 21.6 3.4 22 4 22H9C9.6 22 10 21.6 10 21ZM7.5 18.5C7.5 19.1 7.1 19.5 6.5 19.5C5.9 19.5 5.5 19.1 5.5 18.5C5.5 17.9 5.9 17.5 6.5 17.5C7.1 17.5 7.5 17.9 7.5 18.5Z" fill="black" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">No Toolbar</span>
+									</a>
+								</div>
+								<div class="menu-item">
+									<a class="menu-link" href="../../demo1/dist/dashboards/light-aside.html">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/abstract/abs027.svg-->
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity="0.3" d="M21.25 18.525L13.05 21.825C12.35 22.125 11.65 22.125 10.95 21.825L2.75 18.525C1.75 18.125 1.75 16.725 2.75 16.325L4.04999 15.825L10.25 18.325C10.85 18.525 11.45 18.625 12.05 18.625C12.65 18.625 13.25 18.525 13.85 18.325L20.05 15.825L21.35 16.325C22.35 16.725 22.35 18.125 21.25 18.525ZM13.05 16.425L21.25 13.125C22.25 12.725 22.25 11.325 21.25 10.925L13.05 7.62502C12.35 7.32502 11.65 7.32502 10.95 7.62502L2.75 10.925C1.75 11.325 1.75 12.725 2.75 13.125L10.95 16.425C11.65 16.725 12.45 16.725 13.05 16.425Z" fill="black" />
+													<path d="M11.05 11.025L2.84998 7.725C1.84998 7.325 1.84998 5.925 2.84998 5.525L11.05 2.225C11.75 1.925 12.45 1.925 13.15 2.225L21.35 5.525C22.35 5.925 22.35 7.325 21.35 7.725L13.05 11.025C12.45 11.325 11.65 11.325 11.05 11.025Z" fill="black" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">Light Aside</span>
+									</a>
+								</div>
+								<div class="menu-item">
+									<a class="menu-link" href="../../demo1/dist/dashboards/only-header.html">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/layouts/lay010.svg-->
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity="0.3" d="M20 21H3C2.4 21 2 20.6 2 20V10C2 9.4 2.4 9 3 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="black" />
+													<path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7Z" fill="black" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">Only Header</span>
+									</a>
+								</div>
+								<div class="menu-item">
+									<a class="menu-link" href="../../demo1/dist/landing.html">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/communication/com001.svg-->
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity="0.3" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="black" />
+													<path d="M19 10.4C19 10.3 19 10.2 19 10C19 8.9 18.1 8 17 8H16.9C15.6 6.2 14.6 4.29995 13.9 2.19995C13.3 2.09995 12.6 2 12 2C11.9 2 11.8 2 11.7 2C12.4 4.6 13.5 7.10005 15.1 9.30005C15 9.50005 15 9.7 15 10C15 11.1 15.9 12 17 12C17.1 12 17.3 12 17.4 11.9C18.6 13 19.9 14 21.4 14.8C21.4 14.8 21.5 14.8 21.5 14.9C21.7 14.2 21.8 13.5 21.9 12.7C20.9 12.1 19.9 11.3 19 10.4Z" fill="black" />
+													<path d="M12 15C11 13.1 10.2 11.2 9.60001 9.19995C9.90001 8.89995 10 8.4 10 8C10 7.1 9.40001 6.39998 8.70001 6.09998C8.40001 4.99998 8.20001 3.90005 8.00001 2.80005C7.30001 3.10005 6.70001 3.40002 6.20001 3.90002C6.40001 4.80002 6.50001 5.6 6.80001 6.5C6.40001 6.9 6.10001 7.4 6.10001 8C6.10001 9 6.80001 9.8 7.80001 10C8.30001 11.6 9.00001 13.2 9.70001 14.7C7.10001 13.2 4.70001 11.5 2.40001 9.5C2.20001 10.3 2.10001 11.1 2.10001 11.9C4.60001 13.9 7.30001 15.7 10.1 17.2C10.2 18.2 11 19 12 19C12.6 20 13.2 20.9 13.9 21.8C14.6 21.7 15.3 21.5 15.9 21.2C15.4 20.5 14.9 19.8 14.4 19.1C15.5 19.5 16.5 19.9 17.6 20.2C18.3 19.8 18.9 19.2 19.4 18.6C17.6 18.1 15.7 17.5 14 16.7C13.9 15.8 13.1 15 12 15Z" fill="black" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">Landing Page</span>
+									</a>
 								</div>
 							</div>
-							<!--end::Menu item-->
+							<!--end::Menu-->
 						</div>
-						<!--end::Menu sub-->
+						<!--end::Aside Menu-->
 					</div>
-					<!--end::Menu item-->
-					<!--begin::Menu item-->
-					<div class="menu-item px-5">
-						<a href="../../demo7/dist/account/statements.html" class="menu-link px-5">My Statements</a>
-					</div>
-					<!--end::Menu item-->
-					<!--begin::Menu separator-->
-					<div class="separator my-2"></div>
-					<!--end::Menu separator-->
-					<!--begin::Menu item-->
-					<div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="right-end">
-						<a href="#" class="menu-link px-5">
-							<span class="menu-title position-relative">Language
-								<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-									<img class="w-15px h-15px rounded-1 ms-2" src="{{asset('backend/media/flags/united-states.svg')}}" alt="" /></span></span>
-						</a>
-						<!--begin::Menu sub-->
-						<div class="menu-sub menu-sub-dropdown w-175px py-4">
-							<!--begin::Menu item-->
-							<div class="menu-item px-3">
-								<a href="#" class="menu-link d-flex px-5 active">
-									<span class="symbol symbol-20px me-4">
-										<img class="rounded-1" src="{{asset('backend/media/flags/united-states.svg')}}" alt="" />
-									</span>English</a>
-							</div>
-						</div>
-						<!--end::Menu sub-->
-					</div>
-					<!--end::Menu item-->
-					<!--begin::Menu item-->
-					<div class="menu-item px-5 my-1">
-						<a href="../../demo7/dist/account/settings.html" class="menu-link px-5">Account Settings</a>
-					</div>
-					<!--end::Menu item-->
-					<!--begin::Menu item-->
-					<div class="menu-item px-5">
-						<a href="#" class="menu-link px-5">Sign Out</a>
-					</div>
-					<!--end::Menu item-->
-					<!--begin::Menu separator-->
-					<div class="separator my-2"></div>
-					<!--end::Menu separator-->
-					<!--begin::Menu item-->
-					<div class="menu-item px-5">
-						<div class="menu-content px-5">
-							<label class="form-check form-switch form-check-custom form-check-solid pulse pulse-success" for="kt_user_menu_dark_mode_toggle">
-								<input class="form-check-input w-30px h-20px" type="checkbox" value="1" name="mode" id="kt_user_menu_dark_mode_toggle" data-kt-url="../../demo7/dist/index.html" />
-								<span class="pulse-ring ms-n1"></span>
-								<span class="form-check-label text-gray-600 fs-7">Dark Mode</span>
-							</label>
-						</div>
-					</div>
-					<!--end::Menu item-->
+					<!--end::Aside menu-->
 				</div>
-				<!--end::Menu-->
-				<!--end::Menu wrapper-->
-			</div>
-			<!--end::User-->
-		</div>
-		<!--end::Footer-->
-	</div>
-	<!--end::Primary-->
-</div>
+				<!--end::Aside-->

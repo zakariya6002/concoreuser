@@ -33,46 +33,41 @@
 <!--end::Head-->
 <!--begin::Body-->
 
-<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-fixed aside-secondary-disabled">
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
 	<!--begin::Main-->
 	<!--begin::Root-->
 	<div class="d-flex flex-column flex-root">
 		<!--begin::Page-->
 		<div class="page d-flex flex-row flex-column-fluid">
-<!--sidebar -->@include('navigation-menu')
-
-<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
-    <!-- body header -->
-    @include('header-menu')
-    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						<!--begin::Container-->
-                        
-						<div class="container-xxl" id="kt_content_container">
-                            <!-- content -->
-                            @yield('content')
-                            </div>
-					</div>
-				</div>
+			@include('navigation-menu')
+			<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+				<!-- body header -->
+				@include('header-menu')
+				<!-- content -->
+				@yield('content')
 			</div>
-            <!-- footer -->
-      <!--begin::Javascript-->
-			<!--begin::Global Javascript Bundle(used by all pages)-->
-			<script src="{{asset('plugins/global/plugins.bundle.js')}}"></script>
-			<script src="{{asset('backend/js/scripts.bundle.js')}}"></script>
-			<!--end::Global Javascript Bundle-->
-			<!--begin::Page Vendors Javascript(used by this page)-->
-			<script src="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
-			<!--end::Page Vendors Javascript-->
-			<!--begin::Page Custom Javascript(used by this page)-->
-			<script src="{{asset('backend/js/custom/widgets.js')}}"></script>
-			<script src="{{asset('backend/js/custom/apps/chat/chat.js')}}"></script>
-			<script src="{{asset('backend/js/custom/modals/create-app.js')}}"></script>
-			<script src="{{asset('backend/js/custom/modals/upgrade-plan.js')}}"></script>
-			<!--end::Page Custom Javascript-->
-			<!--end::Javascript-->
 		</div>
+	</div>
+	</div>
+	<!-- footer -->
+	<!--begin::Javascript-->
+	<!--begin::Global Javascript Bundle(used by all pages)-->
+	<script src="{{asset('plugins/global/plugins.bundle.js')}}"></script>
+	<script src="{{asset('backend/js/scripts.bundle.js')}}"></script>
+	<!--end::Global Javascript Bundle-->
+	<!--begin::Page Vendors Javascript(used by this page)-->
+	<script src="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
+	<!--end::Page Vendors Javascript-->
+	<!--begin::Page Custom Javascript(used by this page)-->
+	<script src="{{asset('backend/js/custom/widgets.js')}}"></script>
+	<script src="{{asset('backend/js/custom/apps/chat/chat.js')}}"></script>
+	<script src="{{asset('backend/js/custom/modals/create-app.js')}}"></script>
+	<script src="{{asset('backend/js/custom/modals/upgrade-plan.js')}}"></script>
+	<!--end::Page Custom Javascript-->
+	<!--end::Javascript-->
+	</div>
 	</div>
 </body>
 <!--end::Body-->
 
-</html>      
+</html>
